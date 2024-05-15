@@ -4,17 +4,30 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Lines() {
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [isAnimating1, setIsAnimating1] = useState(false);
+  const [isAnimating2, setIsAnimating2] = useState(false);
+  const [isAnimating3, setIsAnimating3] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIsAnimating((prev) => !prev);
+    const interval1 = setInterval(() => {
+      setIsAnimating1((prev) => !prev);
     }, 2000);
 
+    const interval2 = setInterval(() => {
+      setIsAnimating2((prev) => !prev);
+    }, 2010);
+
+    const interval3 = setInterval(() => {
+      setIsAnimating3((prev) => !prev);
+    }, 2020);
+
     return () => {
-      clearInterval(interval);
+      clearInterval(interval1);
+      clearInterval(interval2);
+      clearInterval(interval3);
     };
   }, []);
+
   return (
     <main className="mx-auto">
       <motion.div
@@ -23,25 +36,28 @@ export default function Lines() {
         transition={{ duration: 0.5, type: "spring" }}
         className="flex flex-col md:flex-row justify-center items-center gap-[20px]"
       >
-        <p
-          className={` cursor-default transition-all duration-500 text-[var(--text-color)] text-[20px]`}
+        <motion.p
+          initial={{ x: -100 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.3, delay: 0.3 }}
+          className={` cursor-default transition-all duration-500 text-[var(--text-color)] text-[24px]`}
         >
           01
-        </p>
+        </motion.p>
         <Link href="/" className="flex flex-col gap-[20px] w-[100px]">
           <div
             className={`h-[2px] bg-[var(--text-color)] transition-all duration-500 ${
-              isAnimating ? "w-[50%]" : "w-0"
+              isAnimating1 ? "w-[75%]" : "w-0"
             }`}
           ></div>
           <div
             className={`h-[2px] bg-[var(--text-color)] transition-all duration-500 ${
-              isAnimating ? "w-[75%]" : "w-0"
+              isAnimating2 ? "w-[50%]" : "w-0"
             }`}
           ></div>
           <div
             className={`h-[2px] bg-[var(--text-color)] transition-all duration-500 ${
-              isAnimating ? "w-[25%]" : "w-0"
+              isAnimating3 ? "w-[25%]" : "w-0"
             }`}
           ></div>
         </Link>

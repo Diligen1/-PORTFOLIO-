@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import style from "@/styles/headermobile/headermobile.module.css";
+import { motion } from "framer-motion";
 
 export default function HeaderMobile() {
   const [showIndicator, setShowIndicator] = useState(false);
@@ -13,8 +14,11 @@ export default function HeaderMobile() {
     }, 1000);
   };
   return (
-    <main className="mx-auto w-[100%] h-[100%] flex items-end justify-center fixed">
-      <div
+    <main className="mx-auto w-[100%] h-[100%] flex items-end justify-center fixed overflow-hidden">
+      <motion.div
+        initial={{ y: 200 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 1 }}
         className={`${style.navigation} w-[100%] h-[90px] rounded-t-[8px] bg-[var(--text-color)] flex flex-row justify-around items-center`}
       >
         <div
@@ -64,7 +68,7 @@ export default function HeaderMobile() {
             ></div>
           )}
         </div>
-      </div>
+      </motion.div>
     </main>
   );
 }

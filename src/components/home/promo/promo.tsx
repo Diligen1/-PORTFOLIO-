@@ -14,13 +14,21 @@ export default function Promo() {
   return (
     <main className="mx-auto">
       <div className="w-full h-[100vh] flex justify-center items-center relative">
-        <div
-          className={` ${style.shadow} w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[580px] md:h-[580px] bg-[var(--third-color)] rounded-[50%] md:top-auto top-[25%] absolute z-[-10] border-[2px] border-[var(--text-color)]`}
-        ></div>
-        <div className="flex flex-col h-[40%] justify-around items-center ">
-          <p className=" text-center tracking-[15px] cursor-default text-[46px] md:text-[96px] text-[var(--text-color)]">
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.6, type: "spring" }}
+          className={`${style.shadow} w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] bg-[var(--third-color)] rounded-[50%] md:top-[20%] top-[25%] absolute z-[-10] border-[2px] border-[var(--text-color)]`}
+        ></motion.div>
+        <div className="flex flex-col h-[40%] justify-around  items-center overflow-hidden">
+          <motion.p
+            initial={{ y: -200 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.4, delay: 0.6, type: "spring" }}
+            className=" text-center tracking-[15px] cursor-default text-[46px] md:text-[96px] text-[var(--text-color)]"
+          >
             CREATOR KUBA
-          </p>
+          </motion.p>
           <p className="text-[26px] md:text-[42px] text-[var(--text-color)] tracking-[10px]">
             {text}
             <span>
