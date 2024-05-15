@@ -24,8 +24,8 @@ export default function Header() {
   };
   return (
     <main className="mx-auto">
-      <div className="w-full h-[100px] hidden md:flex flex-row justify-center items-center absolute z-10">
-        <div className="w-[75%] flex flex-row justify-around items-center">
+      <div className="w-full h-[100px] flex-row justify-center items-center absolute z-10">
+        <div className="w-[75%] hidden md:flex  flex-row justify-around items-center">
           <motion.div
             initial={{ y: -300, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -35,7 +35,6 @@ export default function Header() {
               href="/"
               className="text-[18px] text-[var(--text-color)] hover:text-[var(--third-color)] duration-500 text-underline"
             >
-              {" "}
               About
             </Link>
           </motion.div>
@@ -116,7 +115,7 @@ export default function Header() {
           </motion.div>
         </div>
       </div>
-      <div className="md:hidden">
+      <div className="md:hidden ">
         <HeaderMobile />
       </div>
     </main>
