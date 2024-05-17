@@ -46,18 +46,18 @@ export default function Lines() {
         </motion.p>
         <Link href="/" className="flex flex-col gap-[20px] w-[100px]">
           <div
-            className={`h-[2px] bg-[var(--text-color)] transition-all duration-500 ${
-              isAnimating1 ? "w-[75%]" : "w-0"
+            className={`h-[2px] bg-[var(--text-color)] transition-all duration-500  ${
+              isAnimating1 ? "w-[100%]" : "w-0 "
             }`}
           ></div>
           <div
-            className={`h-[2px] bg-[var(--text-color)] transition-all duration-500 ${
-              isAnimating2 ? "w-[50%]" : "w-0"
+            className={`h-[2px] bg-[var(--text-color)] transition-all duration-500 md:flex hidden ${
+              isAnimating2 ? "w-[75%]" : "w-0"
             }`}
           ></div>
           <div
-            className={`h-[2px] bg-[var(--text-color)] transition-all duration-500 ${
-              isAnimating3 ? "w-[25%]" : "w-0"
+            className={`h-[2px] bg-[var(--text-color)] transition-all duration-500 md:flex hidden ${
+              isAnimating3 ? "w-[50%]" : "w-0"
             }`}
           ></div>
         </Link>
