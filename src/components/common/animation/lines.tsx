@@ -33,13 +33,13 @@ export default function Lines() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, type: "spring" }}
+        transition={{ duration: 0.5, delay: 0.8, type: "spring" }}
         className="flex flex-col md:flex-row justify-center items-center gap-[20px]"
       >
         <motion.p
           initial={{ x: -100 }}
           animate={{ x: 0 }}
-          transition={{ duration: 0.3, delay: 0.3 }}
+          transition={{ duration: 0.3 }}
           className={` cursor-default transition-all duration-500 text-[var(--text-color)] text-[24px]`}
         >
           01

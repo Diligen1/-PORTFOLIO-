@@ -14,11 +14,11 @@ export default function HeaderMobile() {
     }, 1000);
   };
   return (
-    <main className="mx-auto w-[100%] h-[100%] flex items-end justify-center fixed overflow-hidden">
+    <main className="mx-auto w-[100%] h-[100%] flex items-end justify-center fixed z-10 overflow-hidden">
       <motion.div
         initial={{ y: 200 }}
         animate={{ y: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1, delay: 0.8 }}
         className={`${style.navigation} w-[100%] h-[90px] rounded-t-[8px] bg-[var(--text-color)] flex flex-row justify-around items-center`}
       >
         <div
