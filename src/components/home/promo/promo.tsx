@@ -20,7 +20,7 @@ export default function Promo() {
           transition={{ duration: 0.6, delay: 0.8, type: "spring" }}
           className={`${style.shadow} w-[350px] h-[350px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] bg-[var(--third-color)] rounded-[50%] md:top-[20%] top-[25%] absolute z-[-10] border-[2px] border-[var(--text-color)]`}
         ></motion.div>
-        <div className="flex flex-col-reverse md:flex-col h-[65%] md:h-[40%] gap-[20px] justify-start items-center overflow-hidden">
+        <div className="flex flex-col-reverse md:flex-col h-[80%] md:h-[40%] gap-[20px] justify-start items-center overflow-hidden">
           <motion.p
             initial={{ y: -200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
