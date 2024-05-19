@@ -38,7 +38,7 @@ export default function Contact() {
   ]);
   return (
     <main className="mx-auto">
-      <div className="w-[100%] px-[20px] md:w-[80%] h-[70vh] flex flex-wrap justify-centeritems-center gap-[20px] md:text-left text-center">
+      <div className="w-[100%] px-[20px] md:w-[80%] h-[60vh] flex flex-wrap justify-centeritems-center gap-[20px] md:text-left text-center">
         {Contact.map((block, index) => (
           <a
             href={block.assets}
