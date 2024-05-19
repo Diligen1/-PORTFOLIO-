@@ -60,7 +60,7 @@ export default function Promo() {
             </span>
           </motion.p>
         </div>
-        <div className="absolute top-[50%] md:top-auto left-[50%] translate-x-[-50%] md:left-[100px] flex">
+        <div className="hidden absolute top-[50%] md:top-auto left-[50%] translate-x-[-50%] md:left-[100px] md:flex">
           <Lines />
         </div>
         <motion.div className="h-[50px] overflow-hidden absolute top-[80px] left-[50%] translate-x-[-50%] md:top-auto md:left-auto md:bottom-[20px] md:right-[20px] hidden md:flex flex-row gap-[10px] justify-center items-center">

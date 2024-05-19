@@ -1,21 +1,101 @@
 "use client";
+import style from "@/styles/headermobile/headermobile.module.css";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 export default function Skills() {
+  const [blocksData, setBlocksData] = useState([
+    {
+      id: 1,
+      count: 0,
+      target: 90,
+      increment: 1,
+      intervalTime: 30,
+      text: "HTML",
+    },
+    {
+      id: 2,
+      count: 0,
+      target: 100,
+      increment: 1,
+      intervalTime: 30,
+      text: "CSS",
+    },
+    {
+      id: 3,
+      count: 0,
+      target: 60,
+      increment: 1,
+      intervalTime: 30,
+      text: "JavaScript",
+    },
+    {
+      id: 4,
+      count: 0,
+      target: 50,
+      increment: 1,
+      intervalTime: 30,
+      text: "TypeScript",
+    },
+    {
+      id: 5,
+      count: 0,
+      target: 80,
+      increment: 1,
+      intervalTime: 30,
+      text: "React",
+    },
+    {
+      id: 6,
+      count: 0,
+      target: 90,
+      increment: 1,
+      intervalTime: 30,
+      text: "Next JS",
+    },
+  ]);
+  useEffect(() => {
+    const intervals = blocksData.map((block) => {
+      return setInterval(() => {
+        setBlocksData((prevBlocksData) => {
+          return prevBlocksData.map((prevBlockData) => {
+            if (
+              prevBlockData.id === block.id &&
+              prevBlockData.count >= prevBlockData.target
+            ) {
+              const interval = "";
+              clearInterval(interval);
+              return prevBlockData;
+            } else if (prevBlockData.id === block.id) {
+              return {
+                ...prevBlockData,
+                count: prevBlockData.count + prevBlockData.increment,
+              };
+            } else {
+              return prevBlockData;
+            }
+          });
+        });
+      }, block.intervalTime);
+    });
+
+    return () => intervals.forEach((interval) => clearInterval(interval));
+  }, []);
+
   return (
     <main className="mx-auto">
-      <div className="w-full h-full flex flex-col justify-around items-start gap-[20px] md:text-left text-center">
-        <p className="w-full md:w-[250px] tracking-[5px] md:tracking-[10px] text-[var(--text-color)] text-[16px] md:text-[22px] md:text-left  font-normal ">
-          Creator Kuba
-        </p>
-        <p className="tracking-[5px] text-[var(--second-color)] text-[32px] md:text-[56px] font-semibold  ">
-          Front-End Developer
-        </p>
-        <p className="w-[110%] md:w-[90%] font-normal text-[var(--text-color)] translate-x-0 md:tracking-[3px] ">
-          lorem epsome griogsgsregrg grdfgdrgdr dfsefgsrf segdrhdrfsef
-          hdrgsefesgs afsehgsfseg sghsfsc efssfes drg dr gdr g df s egsfse
-          segsefsef sgede fahger hthykugfjgn ut jfuj dhhytjy gsiogjrihgaij
-          afiehfh hf FAWEF Agsefseghr sfesgsr fse fsfeisemfsng S fjSEILjilfj
-          EILjfjzjljflzjle zesj fzjself islzngcmngzdlgnnzjnkgnz z
-        </p>
+      <div className="w-full md:w-[80%]  h-full flex flex-wrap justify-around items-start gap-[20px] md:text-left text-center">
+        {blocksData.map((block, index) => (
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.3, delay: index * 0.1, type: "spring" }}
+            key={block.id}
+            className={`${style.ugol_6} hover:scale-125 duration-300 flex flex-col justify-center items-center w-[100px] h-[100px] md:w-[120px] md:h-[120px] bg-[var(--text-color)] text-[var(--background-color)]`}
+          >
+            <p className="text-[14px] cursor-default">{block.count}%</p>
+            <p className="text-[20px] cursor-default">{block.text}</p>
+          </motion.div>
+        ))}
       </div>
     </main>
   );

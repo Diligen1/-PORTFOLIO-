@@ -3,7 +3,7 @@ export default function Contact() {
   return (
     <main className="mx-auto">
       <div className="w-full h-full flex flex-col justify-around items-start gap-[20px] md:text-left text-center">
-        <p className="w-full md:w-[250px] tracking-[5px] md:tracking-[10px] text-[var(--text-color)] text-[16px] md:text-[22px] md:text-left  font-normal ">
+        <p className="w-full md:w-[250px] tracking-[5px] md:tracking-[10px] text-[var(--text-color)] text-[20px] md:text-[24px] font-normal ">
           Creator Kuba
         </p>
         <p className="tracking-[5px] text-[var(--second-color)] text-[32px] md:text-[56px] font-semibold  ">
