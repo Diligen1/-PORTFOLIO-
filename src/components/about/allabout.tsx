@@ -10,43 +10,50 @@ export default function AllAbout() {
     setActiveComponent(component);
   };
   return (
-    <main className="mx-auto">
-      <div className="w-full h-[100vh] flex flex-row justify-center items-center gap-[40px]">
+    <main className="mx-auto relative">
+      <div className="w-full h-[100vh] relative flex flex-col-reverse md:flex-row justify-center items-center gap-[40px]">
         <div
-          className={`${style.navigator}w-[40%] flex flex-row justify-center items-start gap-[20px] pb-[80px]`}
+          className={`${style.navigator}  z-10 w-[55%] md:w-[40%] flex flex-row justify-center items-start gap-[20px] pb-[80px]`}
         >
           <div
             className={`${style.navItem} ${
               activeComponent === "Info" ? style.active : ""
-            }`}
+            } w-[30px] md:w-[50px] h-[30px]`}
             onClick={() => handleSetActiveComponent("Info")}
           ></div>
           <div
             className={`${style.navItem} ${
               activeComponent === "Skills" ? style.active : ""
-            }`}
+            } w-[30px] md:w-[50px] h-[30px]`}
             onClick={() => handleSetActiveComponent("Skills")}
           ></div>
           <div
             className={`${style.navItem} ${
               activeComponent === "Contact" ? style.active : ""
-            }`}
+            } w-[30px] md:w-[50px] h-[30px]`}
             onClick={() => handleSetActiveComponent("Contact")}
           ></div>
           <div
             className={`${style.navItem} ${
               activeComponent === "Education" ? style.active : ""
-            }`}
+            } w-[30px] md:w-[50px] h-[30px]`}
             onClick={() => handleSetActiveComponent("Education")}
           ></div>
         </div>
-        <div className="w-[60%]">
+        <div className="w-[60%] z-10 ">
           {activeComponent === "Info" && <Info />}
           {activeComponent === "Skills" && <Skills />}
           {activeComponent === "Contact" && <Contact />}
           {activeComponent === "Education" && <Education />}
         </div>
       </div>
+      <div
+        className={`hidden md:flex absolute z-[-2] right-[-450px] bottom-[-300px] w-[700px] h-[700px] rounded-[50%] bg-[var(--third-color)] border-[2px] border-[var(--text-color)]`}
+      ></div>
+
+      <div
+        className={`hidden md:flex absolute z-[-1] right-[50px] bottom-[20px] w-[300px] h-[300px] rounded-[50%] bg-[var(--third-color)] border-[2px] border-[var(--text-color)]`}
+      ></div>
     </main>
   );
 }

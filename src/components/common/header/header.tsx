@@ -114,7 +114,7 @@ export default function Header() {
           </motion.div>
         </div>
       </div>
-      <div className="md:hidden ">
+      <div className="md:hidden w-[100%] h-[100%]">
         <HeaderMobile />
       </div>
     </main>

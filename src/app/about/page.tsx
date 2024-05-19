@@ -5,12 +5,6 @@ export default function About() {
       <Shirma />
       <Header />
       <AllAbout />
-      <div
-        className={` absolute z-[-2] right-[-450px] bottom-[-300px] w-[700px] h-[700px] rounded-[50%] bg-[var(--third-color)] border-[2px] border-[var(--text-color)]`}
-      ></div>
-      <div
-        className={`absolute z-[-1] right-[50px] bottom-[20px] w-[300px] h-[300px] rounded-[50%] bg-[var(--third-color)] border-[2px] border-[var(--text-color)]`}
-      ></div>
     </main>
   );
 }

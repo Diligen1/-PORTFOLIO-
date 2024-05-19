@@ -14,7 +14,7 @@ export default function HeaderMobile() {
     }, 1000);
   };
   return (
-    <main className="mx-auto w-[100%] h-[100%] flex items-end justify-center fixed z-10 overflow-hidden">
+    <main className="mx-auto w-full h-full flex items-end justify-center fixed z-[5] overflow-hidden">
       <motion.div
         initial={{ y: 200 }}
         animate={{ y: 0 }}
@@ -29,7 +29,7 @@ export default function HeaderMobile() {
             className={` ${style.block_1}  flex flex-col justify-center items-center  relative`}
           >
             <i className="fi fi-rr-user"></i>
-            <p>About</p>
+            <p>ABOUT</p>
           </Link>
 
           <Link
@@ -37,7 +37,7 @@ export default function HeaderMobile() {
             className={` ${style.block_1} flex flex-col justify-center items-center  relative`}
           >
             <i className="fi fi-rr-apps"></i>
-            <p>Work</p>
+            <p>WORK</p>
           </Link>
 
           <Link
@@ -45,7 +45,7 @@ export default function HeaderMobile() {
             className={` ${style.block_1} flex flex-col justify-center items-center  relative`}
           >
             <i className="fi fi-rr-home"></i>
-            <p>Home</p>
+            <p>HOME</p>
           </Link>
 
           <Link
@@ -53,14 +53,14 @@ export default function HeaderMobile() {
             className={` ${style.block_1} flex flex-col justify-center items-center  relative`}
           >
             <i className="fi fi-rr-play"></i>
-            <p>Relax</p>
+            <p>RELAX</p>
           </Link>
           <Link
             href="/"
             className={` ${style.block_1} flex flex-col justify-center items-center  relative`}
           >
             <i className="fi fi-rr-phone-call"></i>
-            <p>Contact</p>
+            <p>CONTACT</p>
           </Link>
           {showIndicator && (
             <div

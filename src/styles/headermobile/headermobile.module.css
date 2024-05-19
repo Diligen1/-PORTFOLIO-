@@ -12,7 +12,9 @@
 .navigation .block .block_1:active i {
   transform: translateY(-15px);
 }
-
+.block_1 {
+  color: var(--background-color);
+}
 .navigation p {
   opacity: 0;
   transform: translateY(10px);
@@ -27,7 +29,7 @@
   position: absolute;
   bottom: 50px;
   border-radius: 50%;
-  background-color: var(--third-color);
+  background-color: var(--backgrond-color);
   border: 8px solid var(--background-color);
   z-index: 1;
 }
@@ -38,7 +40,7 @@
   left: -27px;
   width: 21px;
   height: 21px;
-  background-color: var(--text-color);
+  background-color: var(--backgrond-color);
   border-top-right-radius: 20px;
   box-shadow: 0px -10px 0 0 var(--background-color);
 }
@@ -49,24 +51,13 @@
   right: -26px;
   width: 20px;
   height: 20px;
-  background-color: var(--text-color);
+  background-color: var(--backgrond-color);
   border-top-left-radius: 20px;
   box-shadow: 0px -10px 0 0 var(--background-color);
 }
 
-.navigator {
-  width: 40%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: start;
-  gap: 20px;
-}
-
 .navItem {
   cursor: pointer;
-  width: 50px;
-  height: 30px;
   border-top: 5px solid var(--text-color);
   transition: width 0.3s ease-in-out;
   position: relative;
@@ -88,7 +79,7 @@
   height: 8px;
   position: absolute;
   bottom: 0px;
-  background-color: var(--second-color);
+  background-color: var(--text-color);
   border-radius: 50%;
 }
 

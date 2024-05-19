@@ -30,7 +30,7 @@ export default function Promo() {
     delaySpeed: 10000,
   });
   return (
-    <main className="mx-auto">
+    <main className="mx-auto ">
       <div className="w-full h-[100vh] flex justify-center items-center relative">
         <motion.div
           onClick={onClick}
