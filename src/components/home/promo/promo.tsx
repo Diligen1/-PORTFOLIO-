@@ -3,7 +3,25 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import Lines from "@/components/common/animation/lines";
 import style from "@/styles/promo/promo.module.css";
+import { useState } from "react";
 export default function Promo() {
+  const themes = [
+    "base",
+    "dark-blue",
+    "red",
+    "aqua",
+    "white",
+    "dark",
+    "pink",
+    "blue",
+  ];
+  const [currentThemeIndex, setCurrentThemeIndex] = useState(0);
+  const onClick = () => {
+    const nextThemeIndex = (currentThemeIndex + 1) % themes.length;
+    const nextTheme = themes[nextThemeIndex];
+    document.body.dataset.theme = nextTheme;
+    setCurrentThemeIndex(nextThemeIndex);
+  };
   const [text] = useTypewriter({
     words: ["DEVELOPER", "DESIGNER", "RELAXING"],
     loop: 0,
@@ -15,10 +33,11 @@ export default function Promo() {
     <main className="mx-auto">
       <div className="w-full h-[100vh] flex justify-center items-center relative">
         <motion.div
+          onClick={onClick}
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.6, delay: 0.8, type: "spring" }}
-          className={`${style.shadow} w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] bg-[var(--third-color)] rounded-[50%] md:top-[20%] top-[10%] absolute z-[-10] border-[2px] border-[var(--text-color)]`}
+          className={` w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] bg-[var(--third-color)] rounded-[50%] md:top-[20%] top-[10%] absolute z-10 md:z-[-10] border-[2px] border-[var(--text-color)]`}
         ></motion.div>
         <div className="flex flex-col-reverse md:flex-col h-[60%] md:h-[40%] gap-[20px] justify-start items-center overflow-hidden">
           <motion.p
@@ -41,7 +60,7 @@ export default function Promo() {
             </span>
           </motion.p>
         </div>
-        <div className="absolute top-[20%] md:top-auto left-[50%] translate-x-[-50%] md:left-[100px] flex">
+        <div className="absolute top-[50%] md:top-auto left-[50%] translate-x-[-50%] md:left-[100px] flex">
           <Lines />
         </div>
         <motion.div className="h-[50px] overflow-hidden absolute top-[80px] left-[50%] translate-x-[-50%] md:top-auto md:left-auto md:bottom-[20px] md:right-[20px] hidden md:flex flex-row gap-[10px] justify-center items-center">
@@ -55,7 +74,7 @@ export default function Promo() {
                 delay: 0.8,
                 type: "spring",
               }}
-              className={`w-[15px] h-[15px] rounded-[50%] bg-[var(--third-color)] `}
+              className={`w-[15px] h-[15px] rounded-[50%] bg-[var(--second-color)] `}
             ></motion.div>
           ))}
         </motion.div>

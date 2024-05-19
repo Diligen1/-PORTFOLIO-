@@ -27,7 +27,9 @@ export default function RootLayout({
           href="https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
         ></link>
       </head>
-      <body className={roboto.className}>{children}</body>
+      <body suppressHydrationWarning={true} className={roboto.className}>
+        {children}
+      </body>
     </html>
   );
 }

@@ -40,23 +40,23 @@ export default function Lines() {
           initial={{ x: -100 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.3 }}
-          className={` cursor-default transition-all duration-500 text-[var(--text-color)] text-[24px]`}
+          className={` cursor-default transition-all duration-500 text-[var(--second-color)] text-[24px]`}
         >
           01
         </motion.p>
         <Link href="/" className="flex flex-col gap-[20px] w-[100px]">
           <div
-            className={`h-[2px] bg-[var(--text-color)] transition-all duration-500  ${
+            className={`h-[2px] bg-[var(--second-color)] transition-all duration-500  ${
               isAnimating1 ? "w-[100%]" : "w-0 "
             }`}
           ></div>
           <div
-            className={`h-[2px] bg-[var(--text-color)] transition-all duration-500 md:flex hidden ${
+            className={`h-[2px] bg-[var(--second-color)] transition-all duration-500 md:flex hidden ${
               isAnimating2 ? "w-[75%]" : "w-0"
             }`}
           ></div>
           <div
-            className={`h-[2px] bg-[var(--text-color)] transition-all duration-500 md:flex hidden ${
+            className={`h-[2px] bg-[var(--second-color)] transition-all duration-500 md:flex hidden ${
               isAnimating3 ? "w-[50%]" : "w-0"
             }`}
           ></div>

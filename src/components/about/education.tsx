@@ -6,7 +6,7 @@ export default function Education() {
         <p className="tracking-[10px] text-[var(--text-color)] text-[22px] font-light">
           Realm Sayan
         </p>
-        <p className="tracking-[5px] text-[var(--third-color)] text-[56px] font-semibold">
+        <p className="tracking-[5px] text-[var(--second-color)] text-[56px] font-semibold">
           Education
         </p>
         <p className="w-[90%] font-normal text-[var(--text-color)] tracking-[3px]">

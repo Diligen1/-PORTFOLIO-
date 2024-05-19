@@ -33,7 +33,7 @@ export default function Header() {
           >
             <Link
               href="/about"
-              className="text-[18px] text-[var(--text-color)] hover:text-[var(--third-color)] duration-500 text-underline"
+              className="text-[18px] text-[var(--text-color)] hover:text-[var(--second-color)] duration-500 text-underline"
             >
               About
             </Link>
@@ -42,7 +42,7 @@ export default function Header() {
             initial={{ y: -300, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 1, type: "spring" }}
-            className="w-[6px] h-[6px] rounded-[50%] bg-[var(--text-color)]"
+            className="w-[6px] h-[6px] rounded-[50%] bg-[var(--second-color)]"
           ></motion.div>
           <motion.div
             initial={{ y: -300, opacity: 0 }}
@@ -51,7 +51,7 @@ export default function Header() {
           >
             <Link
               href="/"
-              className="text-[18px] text-[var(--text-color)] hover:text-[var(--third-color)] duration-500 text-underline"
+              className="text-[18px] text-[var(--text-color)] hover:text-[var(--second-color)] duration-500 text-underline"
             >
               Works
             </Link>
@@ -60,7 +60,7 @@ export default function Header() {
             initial={{ y: -300, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.1, type: "spring" }}
-            className="w-[6px] h-[6px] rounded-[50%] bg-[var(--text-color)]"
+            className="w-[6px] h-[6px] rounded-[50%] bg-[var(--second-color)]"
           ></motion.div>
           <motion.div
             initial={{ y: -300, opacity: 0 }}
@@ -79,7 +79,7 @@ export default function Header() {
             initial={{ y: -300, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.1, type: "spring" }}
-            className="w-[6px] h-[6px] rounded-[50%] bg-[var(--text-color)]"
+            className="w-[6px] h-[6px] rounded-[50%] bg-[var(--second-color)]"
           ></motion.div>
           <motion.div
             initial={{ y: -300, opacity: 0 }}
@@ -88,7 +88,7 @@ export default function Header() {
           >
             <Link
               href="/"
-              className="text-[18px] text-[var(--text-color)] text-underline hover:text-[var(--third-color)] duration-500"
+              className="text-[18px] text-[var(--text-color)] text-underline hover:text-[var(--second-color)] duration-500"
             >
               Home
             </Link>
@@ -98,7 +98,7 @@ export default function Header() {
             initial={{ y: -300, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.7, type: "spring" }}
-            className="w-[6px] h-[6px] rounded-[50%] bg-[var(--text-color)]"
+            className="w-[6px] h-[6px] rounded-[50%] bg-[var(--second-color)]"
           ></motion.div>
           <motion.div
             initial={{ y: -300, opacity: 0 }}
@@ -107,7 +107,7 @@ export default function Header() {
           >
             <Link
               href="/"
-              className="text-[18px] text-[var(--text-color)] text-underline hover:text-[var(--third-color)] duration-500"
+              className="text-[18px] text-[var(--text-color)] text-underline hover:text-[var(--second-color)] duration-500"
             >
               Contact
             </Link>

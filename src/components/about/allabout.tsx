@@ -2,6 +2,7 @@
 import { Info, Skills, Contact, Education } from "@/components";
 import { useState } from "react";
 import style from "@/styles/headermobile/headermobile.module.css";
+
 export default function AllAbout() {
   const [activeComponent, setActiveComponent] = useState("Info");
 
