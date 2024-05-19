@@ -114,7 +114,7 @@ export default function Skills() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.3, delay: index * 0.1, type: "spring" }}
             key={block.id}
-            className={`${style.ugol_6} flex flex-col justify-center items-center w-[120px] h-[120px] md:w-[140px] md:h-[140px] bg-[var(--text-color)] text-[var(--background-color)]`}
+            className={`${style.ugol_6} flex flex-col justify-center items-center w-[110px] h-[110px] md:w-[140px] md:h-[140px] bg-[var(--text-color)] text-[var(--background-color)]`}
           >
             <p className="text-[14px] md:text-[16px] cursor-default">
               {block.count}%
