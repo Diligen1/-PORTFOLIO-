@@ -1,21 +1,58 @@
 "use client";
+
+import { motion } from "framer-motion";
+import { useState } from "react";
+
 export default function Contact() {
+  const [Contact, setCoontact] = useState([
+    {
+      id: 1,
+      icon: <i className="fi fi-brands-telegram"></i>,
+      assets: `https://t.me/OffRealm`,
+      text: "Telegram",
+    },
+    {
+      id: 2,
+      icon: <i className="fi fi-brands-whatsapp"></i>,
+      assets: `https://api.whatsapp.com/send?phone=996500254220`,
+      text: "Whatsapp",
+    },
+    {
+      id: 3,
+      icon: <i className="fi fi-brands-instagram"></i>,
+      assets: `https://www.instagram.com/ku._.ch/`,
+      text: "Instagram",
+    },
+    {
+      id: 4,
+      icon: <i className="fi fi-brands-github"></i>,
+      assets: `https://github.com/Diligen1`,
+      text: "Github",
+    },
+    {
+      id: 5,
+      icon: <i className="fi fi-brands-gitlab"></i>,
+      assets: `https://gitlab.com/kuba.2000.0505.kg`,
+      text: "Gitlab",
+    },
+  ]);
   return (
     <main className="mx-auto">
-      <div className="w-full h-full flex flex-col justify-around items-start gap-[20px] md:text-left text-center">
-        <p className="w-full md:w-[250px] tracking-[5px] md:tracking-[10px] text-[var(--text-color)] text-[20px] md:text-[24px] font-normal ">
-          Creator Kuba
-        </p>
-        <p className="tracking-[5px] text-[var(--second-color)] text-[32px] md:text-[56px] font-semibold  ">
-          Front-End Developer
-        </p>
-        <p className="w-[110%] md:w-[90%] font-normal text-[var(--text-color)] translate-x-0 md:tracking-[3px] ">
-          lorem epsome griogsgsregrg grdfgdrgdr dfsefgsrf segdrhdrfsef
-          hdrgsefesgs afsehgsfseg sghsfsc efssfes drg dr gdr g df s egsfse
-          segsefsef sgede fahger hthykugfjgn ut jfuj dhhytjy gsiogjrihgaij
-          afiehfh hf FAWEF Agsefseghr sfesgsr fse fsfeisemfsng S fjSEILjilfj
-          EILjfjzjljflzjle zesj fzjself islzngcmngzdlgnnzjnkgnz z
-        </p>
+      <div className="w-full md:w-[80%] h-full flex flex-wrap justify-around items-start gap-[20px] md:text-left text-center">
+        {Contact.map((block, index) => (
+          <a
+            href={block.assets}
+            key={index}
+            className={`hover:scale-105 duration-300 w-full h-[60px] bg-[var(--text-color)] rounded-[8px] gap-[10px] flex flex-row justify-center items-center`}
+          >
+            <div className="text-[22px] h-[26px] text-[var(--background-color)]">
+              {block.icon}
+            </div>
+            <p className="text-[16px] text-[var(--background-color)]">
+              {block.text}
+            </p>
+          </a>
+        ))}
       </div>
     </main>
   );

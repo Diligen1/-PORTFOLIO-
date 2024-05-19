@@ -52,6 +52,30 @@ export default function Skills() {
       intervalTime: 30,
       text: "Next JS",
     },
+    {
+      id: 7,
+      count: 0,
+      target: 90,
+      increment: 1,
+      intervalTime: 30,
+      text: "Redux",
+    },
+    {
+      id: 8,
+      count: 0,
+      target: 90,
+      increment: 1,
+      intervalTime: 30,
+      text: "Tailwind Css",
+    },
+    {
+      id: 9,
+      count: 0,
+      target: 90,
+      increment: 1,
+      intervalTime: 30,
+      text: "Framer-motion",
+    },
   ]);
   useEffect(() => {
     const intervals = blocksData.map((block) => {
@@ -83,17 +107,21 @@ export default function Skills() {
 
   return (
     <main className="mx-auto">
-      <div className="w-full md:w-[80%]  h-full flex flex-wrap justify-around items-start gap-[20px] md:text-left text-center">
+      <div className="w-full md:w-[80%] h-full gap-[10px] flex flex-wrap justify-around items-start md:text-left text-center">
         {blocksData.map((block, index) => (
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.3, delay: index * 0.1, type: "spring" }}
             key={block.id}
-            className={`${style.ugol_6} hover:scale-125 duration-300 flex flex-col justify-center items-center w-[100px] h-[100px] md:w-[120px] md:h-[120px] bg-[var(--text-color)] text-[var(--background-color)]`}
+            className={`${style.ugol_6} flex flex-col justify-center items-center w-[90px] h-[90px] md:w-[120px] md:h-[120px] bg-[var(--text-color)] text-[var(--background-color)]`}
           >
-            <p className="text-[14px] cursor-default">{block.count}%</p>
-            <p className="text-[20px] cursor-default">{block.text}</p>
+            <p className="text-[12px] md:text-[14px] cursor-default">
+              {block.count}%
+            </p>
+            <p className="text-[14px] md:text-[18px] cursor-default">
+              {block.text}
+            </p>
           </motion.div>
         ))}
       </div>
