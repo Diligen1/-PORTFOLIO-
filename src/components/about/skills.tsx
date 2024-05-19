@@ -107,19 +107,19 @@ export default function Skills() {
 
   return (
     <main className="mx-auto">
-      <div className="w-full md:w-[80%] h-[70vh] gap-[10px] flex flex-wrap justify-around items-start md:text-left text-center">
+      <div className="w-[100%] px-[20px] md:w-[80%] h-[70vh] flex flex-wrap justify-around items-center md:text-left text-center">
         {blocksData.map((block, index) => (
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.3, delay: index * 0.1, type: "spring" }}
             key={block.id}
-            className={`${style.ugol_6} flex flex-col justify-center items-center w-[90px] h-[90px] md:w-[120px] md:h-[120px] bg-[var(--text-color)] text-[var(--background-color)]`}
+            className={`${style.ugol_6} flex flex-col justify-center items-center w-[120px] h-[120px] md:w-[140px] md:h-[140px] bg-[var(--text-color)] text-[var(--background-color)]`}
           >
-            <p className="text-[12px] md:text-[14px] cursor-default">
+            <p className="text-[14px] md:text-[16px] cursor-default">
               {block.count}%
             </p>
-            <p className="text-[14px] md:text-[18px] cursor-default">
+            <p className="text-[16px] md:text-[20px] cursor-default">
               {block.text}
             </p>
           </motion.div>

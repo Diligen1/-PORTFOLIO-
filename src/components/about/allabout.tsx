@@ -40,7 +40,7 @@ export default function AllAbout() {
             onClick={() => handleSetActiveComponent("Education")}
           ></div>
         </div>
-        <div className="w-[60%] z-10 ">
+        <div className="w-full md:w-[60%] z-10  ">
           {activeComponent === "Info" && <Info />}
           {activeComponent === "Skills" && <Skills />}
           {activeComponent === "Contact" && <Contact />}
