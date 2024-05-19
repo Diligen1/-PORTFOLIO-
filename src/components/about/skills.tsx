@@ -107,7 +107,7 @@ export default function Skills() {
 
   return (
     <main className="mx-auto">
-      <div className="w-full md:w-[80%] h-full gap-[10px] flex flex-wrap justify-around items-start md:text-left text-center">
+      <div className="w-full md:w-[80%] h-[70vh] gap-[10px] flex flex-wrap justify-around items-start md:text-left text-center">
         {blocksData.map((block, index) => (
           <motion.div
             initial={{ y: 100, opacity: 0 }}
