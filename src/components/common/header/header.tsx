@@ -50,7 +50,7 @@ export default function Header() {
             transition={{ duration: 0.5, delay: 1.9, type: "spring" }}
           >
             <Link
-              href="/"
+              href="/work"
               className="text-[18px] text-[var(--text-color)] hover:text-[var(--second-color)] duration-500 text-underline"
             >
               WORK

@@ -30,6 +30,14 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css"
         ></link>
+        <link
+          rel="stylesheet"
+          href="https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-straight/css/uicons-regular-straight.css"
+        ></link>
+        <link
+          rel="stylesheet"
+          href="https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-straight/css/uicons-solid-straight.css"
+        ></link>
       </head>
       <body suppressHydrationWarning={true} className={roboto.className}>
         {children}

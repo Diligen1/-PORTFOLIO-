@@ -33,7 +33,7 @@ export default function HeaderMobile() {
           </Link>
 
           <Link
-            href="/"
+            href="/work"
             className={` ${style.block_1} flex flex-col justify-center items-center  relative`}
           >
             <i className="fi fi-rr-apps"></i>

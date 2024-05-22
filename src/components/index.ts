@@ -7,6 +7,7 @@ import Info from "./about/info";
 import Skills from "./about/skills";
 import Contact from "./about/contact";
 import AllAbout from "./about/allabout";
+import PromoWorks from "./works/promoworks";
 export {
   Header,
   HeaderMobile,
@@ -17,4 +18,5 @@ export {
   AllAbout,
   Skills,
   Contact,
+  PromoWorks,
 };
