@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --background-color: #ffffff;
-  --text-color: #000000;
-  --second-color: #333333;
-  --third-color: #999999;
+  --background-color: #e63946;
+  --text-color: #f1faee;
+  --second-color: #a8dadc;
+  --third-color: #457b9d;
 }
 [data-theme="dark-blue"] {
   --background-color: #00a19a;
@@ -33,10 +33,10 @@
   --third-color: #ffc857;
 }
 [data-theme="dark"] {
-  --background-color: #e63946;
-  --text-color: #f1faee;
-  --second-color: #a8dadc;
-  --third-color: #457b9d;
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --second-color: #333333;
+  --third-color: #999999;
 }
 [data-theme="pink"] {
   --background-color: #011627;

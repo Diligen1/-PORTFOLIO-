@@ -6,7 +6,6 @@ import Shirma from "./common/animation/shirma";
 import Info from "./about/info";
 import Skills from "./about/skills";
 import Contact from "./about/contact";
-import Education from "./about/education";
 import AllAbout from "./about/allabout";
 export {
   Header,
@@ -18,5 +17,4 @@ export {
   AllAbout,
   Skills,
   Contact,
-  Education,
 };

@@ -29,43 +29,43 @@ export default function Header() {
           <motion.div
             initial={{ y: -300, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.8, type: "spring" }}
+            transition={{ duration: 0.5, delay: 1.8, type: "spring" }}
           >
             <Link
               href="/about"
               className="text-[18px] text-[var(--text-color)] hover:text-[var(--second-color)] duration-500 text-underline"
             >
-              About
+              ABOUT
             </Link>
           </motion.div>
           <motion.div
             initial={{ y: -300, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 1, type: "spring" }}
+            transition={{ duration: 0.5, delay: 2, type: "spring" }}
             className="w-[6px] h-[6px] rounded-[50%] bg-[var(--second-color)]"
           ></motion.div>
           <motion.div
             initial={{ y: -300, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.9, type: "spring" }}
+            transition={{ duration: 0.5, delay: 1.9, type: "spring" }}
           >
             <Link
               href="/"
               className="text-[18px] text-[var(--text-color)] hover:text-[var(--second-color)] duration-500 text-underline"
             >
-              Works
+              WORK
             </Link>
           </motion.div>
           <motion.div
             initial={{ y: -300, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 1.1, type: "spring" }}
+            transition={{ duration: 0.5, delay: 2.1, type: "spring" }}
             className="w-[6px] h-[6px] rounded-[50%] bg-[var(--second-color)]"
           ></motion.div>
           <motion.div
             initial={{ y: -300, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 1.2, type: "spring" }}
+            transition={{ duration: 0.5, delay: 2.2, type: "spring" }}
           >
             <div
               onClick={onClick}
@@ -78,38 +78,38 @@ export default function Header() {
           <motion.div
             initial={{ y: -300, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 1.1, type: "spring" }}
+            transition={{ duration: 0.5, delay: 2.1, type: "spring" }}
             className="w-[6px] h-[6px] rounded-[50%] bg-[var(--second-color)]"
           ></motion.div>
           <motion.div
             initial={{ y: -300, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.9, type: "spring" }}
+            transition={{ duration: 0.5, delay: 1.9, type: "spring" }}
           >
             <Link
               href="/"
               className="text-[18px] text-[var(--text-color)] text-underline hover:text-[var(--second-color)] duration-500"
             >
-              Home
+              HOME
             </Link>
           </motion.div>
 
           <motion.div
             initial={{ y: -300, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.7, type: "spring" }}
+            transition={{ duration: 0.5, delay: 1.7, type: "spring" }}
             className="w-[6px] h-[6px] rounded-[50%] bg-[var(--second-color)]"
           ></motion.div>
           <motion.div
             initial={{ y: -300, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.5, type: "spring" }}
+            transition={{ duration: 0.5, delay: 1.5, type: "spring" }}
           >
             <Link
               href="/"
               className="text-[18px] text-[var(--text-color)] text-underline hover:text-[var(--second-color)] duration-500"
             >
-              Contact
+              CONTACT
             </Link>
           </motion.div>
         </div>

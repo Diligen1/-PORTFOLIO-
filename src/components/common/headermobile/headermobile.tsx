@@ -18,7 +18,7 @@ export default function HeaderMobile() {
       <motion.div
         initial={{ y: 200 }}
         animate={{ y: 0 }}
-        transition={{ duration: 1, delay: 0.8 }}
+        transition={{ duration: 1, delay: 1.2 }}
         className={`${style.navigation} w-[100%] h-[90px] rounded-t-[8px] bg-[var(--text-color)] flex flex-row justify-around items-center`}
       >
         <div

@@ -3,8 +3,8 @@ export default function Info() {
   return (
     <main className="mx-auto">
       <div className=" w-full h-[55vh] px-[20px] flex flex-col justify-center items-center gap-[20px] md:text-left text-center">
-        <p className="w-full md:w-[250px] tracking-[5px] md:tracking-[10px] text-[var(--text-color)] text-[20px] md:text-[24px]   font-normal ">
-          Creator Kuba
+        <p className="tracking-[5px] md:tracking-[10px] text-[var(--text-color)] text-[20px] md:text-[24px] font-normal ">
+          CREATOR KUBA
         </p>
         <p className="tracking-[5px] text-[var(--second-color)] text-[32px] md:text-[56px] font-semibold  ">
           Казыбеков Кубаныч
