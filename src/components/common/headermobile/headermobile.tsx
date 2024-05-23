@@ -14,7 +14,7 @@ export default function HeaderMobile() {
     }, 1000);
   };
   return (
-    <main className="mx-auto w-full h-full flex items-end justify-center fixed z-[5] overflow-hidden">
+    <main className="mx-auto w-full h-full flex items-end justify-center fixed z-[6] overflow-hidden pointer-events-none">
       <motion.div
         initial={{ y: 200 }}
         animate={{ y: 0 }}
@@ -22,11 +22,11 @@ export default function HeaderMobile() {
         className={`${style.navigation} w-[100%] h-[90px] rounded-t-[8px] bg-[var(--text-color)] flex flex-row justify-around items-center`}
       >
         <div
-          className={` ${style.block} w-full h-[90px] flex flex-row justify-around items-center`}
+          className={` ${style.block} w-full h-[90px] flex flex-row justify-around items-center pointer-events-auto`}
         >
           <Link
             href="/about"
-            className={` ${style.block_1}  flex flex-col justify-center items-center  relative`}
+            className={` ${style.block_1}  flex flex-col justify-center items-center relative`}
           >
             <i className="fi fi-rr-user"></i>
             <p>ABOUT</p>
@@ -34,7 +34,7 @@ export default function HeaderMobile() {
 
           <Link
             href="/work"
-            className={` ${style.block_1} flex flex-col justify-center items-center  relative`}
+            className={` ${style.block_1} flex flex-col justify-center items-center relative`}
           >
             <i className="fi fi-rr-apps"></i>
             <p>WORK</p>
@@ -49,14 +49,7 @@ export default function HeaderMobile() {
           </Link>
 
           <Link
-            href="/"
-            className={` ${style.block_1} flex flex-col justify-center items-center  relative`}
-          >
-            <i className="fi fi-rr-play"></i>
-            <p>RELAX</p>
-          </Link>
-          <Link
-            href="/"
+            href="/contact"
             className={` ${style.block_1} flex flex-col justify-center items-center  relative`}
           >
             <i className="fi fi-rr-phone-call"></i>

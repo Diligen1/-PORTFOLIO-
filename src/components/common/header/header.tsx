@@ -4,16 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import HeaderMobile from "../headermobile/headermobile";
 export default function Header() {
-  const themes = [
-    "base",
-    "dark-blue",
-    "red",
-    "aqua",
-    "white",
-    "dark",
-    "pink",
-    "blue",
-  ];
+  const themes = ["base", "red", "white", "pink"];
   const [currentThemeIndex, setCurrentThemeIndex] = useState(0);
 
   const onClick = () => {
@@ -106,7 +97,7 @@ export default function Header() {
             transition={{ duration: 0.5, delay: 1.5, type: "spring" }}
           >
             <Link
-              href="/"
+              href="/contact"
               className="text-[18px] text-[var(--text-color)] text-underline hover:text-[var(--second-color)] duration-500"
             >
               CONTACT

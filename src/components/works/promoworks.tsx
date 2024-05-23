@@ -28,7 +28,7 @@ export default function PromoWorks() {
       icon: <i className="fi fi-rs-caret-down"></i>,
       icon_2: <i className="fi fi-ss-star"></i>,
       title: "HORSE",
-      text: "lorem",
+      text: "Разработал сайт для туризма всю front составляюшую часть делал один без дизайнера",
       number: "02",
       btn: "ПЕРЕЙТИ",
       url: "https://horse-travel.com/",
@@ -46,8 +46,8 @@ export default function PromoWorks() {
     },
   ]);
   return (
-    <main className="mx-auto w-full h-auto z-10">
-      <div className="w-auto  md:h-[100vh] flex flex-col gap-[40px] md:flex-row justify-evenly items-center pt-[20px]  md:pt-[80px]">
+    <main className="mx-auto w-full min-h-screen  ">
+      <div className="w-auto h-auto z-5 md:h-[100vh] flex flex-col gap-[40px] md:flex-row justify-evenly items-center pt-[20px]  md:pt-[80px]">
         {blockDate.map((el) => (
           <div
             key={el.id}
