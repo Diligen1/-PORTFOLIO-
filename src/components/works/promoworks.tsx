@@ -3,6 +3,19 @@ import { useState } from "react";
 import Image from "next/image";
 import image from "../../../public/assets/img/booster.jpg";
 import image_2 from "../../../public/assets/img/travelr.jpg";
+import { motion } from "framer-motion";
+import { Josefin_Sans, PT_Sans_Narrow } from "next/font/google";
+const josefin = Josefin_Sans({
+  weight: ["300", "400", "500"],
+  display: "swap",
+  subsets: ["latin"],
+});
+const narrow = PT_Sans_Narrow({
+  weight: ["400"],
+  display: "swap",
+  subsets: ["cyrillic"],
+});
+
 export default function PromoWorks() {
   const [isHovered, setIsHovered] = useState(false);
   const [openBlockId, setOpenBlockId] = useState(null);
@@ -48,8 +61,15 @@ export default function PromoWorks() {
   return (
     <main className="mx-auto w-full min-h-screen  ">
       <div className="w-auto h-auto z-5 md:h-[100vh] flex flex-col gap-[40px] md:flex-row justify-evenly items-center pt-[20px]  md:pt-[80px]">
-        {blockDate.map((el) => (
-          <div
+        {blockDate.map((el, index) => (
+          <motion.div
+            initial={{ y: 500, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              duration: 0.3,
+              delay: 1.6 + index * 0.2,
+              type: "spring",
+            }}
             key={el.id}
             className={`relative z-[5] w-[300px] bg-[var(--second-color)] duration-300 transition-all border-x-[2px] border-[var(--text-color)] overflow-hidden ${
               openBlockId === el.id ? "h-[500px]" : "h-[350px]"
@@ -84,14 +104,20 @@ export default function PromoWorks() {
                 </div>
               )}
               {openBlockId === el.id && (
-                <p className="px-[5px] text-[14px] text-center text-[var(--text-color)] pt-[20px]">
+                <p
+                  className={`${narrow.className} px-[5px] text-[16px] text-center text-[var(--text-color)] pt-[20px]`}
+                >
                   {el.text}
                 </p>
               )}
-              <p className="text-center  text-[22px] text-[var(--text-color)]">
+              <p
+                className={`${josefin.className} text-center  text-[22px] text-[var(--background-color)]`}
+              >
                 {el.title}
               </p>
-              <p className="text-center text-[var(--text-color)] text-[14px]">
+              <p
+                className={`${josefin.className} text-center text-[var(--background-color)] text-[14px]`}
+              >
                 {el.number}
               </p>
               {openBlockId === el.id && (
@@ -111,7 +137,9 @@ export default function PromoWorks() {
                   ></div>
                   <div className="flex flex-row justify-center items-center">
                     <p
-                      className={`text-[16px] tracking-[2px]  z-[5] ${
+                      className={`${
+                        narrow.className
+                      }text-[16px] tracking-[2px]  z-[5] ${
                         isHovered
                           ? "text-[var(--second-color)]"
                           : "text-[var(--text-color)]"
@@ -135,67 +163,9 @@ export default function PromoWorks() {
                 openBlockId === el.id ? "w-[60%]" : "w-1/4"
               }`}
             ></div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </main>
   );
 }
-{
-  /* <div className="mt-4 text-center">
-                  <a href={el.url} target="_blank" rel="noopener noreferrer">
-                    <button className="mt-2 bg-blue-500 text-white px-4 py-2 rounded">
-                      {el.btn}
-                    </button>
-                  </a>
-                </div> */
-}
-// <div
-//                   className={` bg-transparent cursor-pointer overflow-hidden relative w-[100px] h-[30px] flex flex-row items-center`}
-//                   onMouseEnter={() => setIsHovered(true)}
-//                   onMouseLeave={() => setIsHovered(false)}
-//                 >
-//                   <div
-//                     className={` bg-[var(--third-color)] border-[var(--background-fon)] left-0 h-full border-r-[4px] transition-all duration-500 flex justify-center items-center ${
-//                       isHovered ? "w-full" : "w-[40px]"
-//                     }
-//                     ${isHovered ? "border-transparent" : ""} `}
-//                   >
-//                     <p
-//                       className={` text-[var(--background-fon)] transition-all duration-500 text-[20px] ${
-//                         isHovered ? "opacity-100" : "opacity-0"
-//                       } `}
-//                     >
-//                       ПЕРЕЙТИ
-//                     </p>
-//                   </div>
-//                   <div
-//                     className={` bg-[var(--background-fon)] absolute w-[35px] h-[35px] left-[20px] rounded-[50%] transition-all duration-500 flex justify-center items-center  ${
-//                       isHovered ? "left-[80%]" : "left-0"
-//                     }
-//                 ${
-//                   isHovered
-//                     ? "text-[var(--background-fon)]"
-//                     : "text-[var(--text-color)]"
-//                 }
-//                 ${
-//                   isHovered
-//                     ? "bg-[var(--text-color)]"
-//                     : "bg-[var(--background-fon)]"
-//                 }`}
-//                   >
-//                     <i className="fi fi-ts-angle-double-right text-[16px] h-[20px]"></i>
-//                   </div>
-//                   <p
-//                     className={` text-[var(--background-fon)] absolute text-[13px] px-[20px] left-[50px] transition-all duration-500
-//                    ${
-//                      isHovered
-//                        ? "left-[200px] transform translate-x-[140px]"
-//                        : ""
-//                    }
-//                    ${isHovered ? "opacity-0" : "opacity-100"}
-//                    `}
-//                   >
-//                     ПОСМОТРЕТЬ РАБОТЫ
-//                   </p>
-//                 </div>

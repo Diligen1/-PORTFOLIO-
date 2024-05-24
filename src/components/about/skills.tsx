@@ -2,6 +2,12 @@
 import style from "@/styles/headermobile/headermobile.module.css";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Oswald } from "next/font/google";
+const oswald = Oswald({
+  weight: ["300", "400", "500"],
+  display: "swap",
+  subsets: ["latin", "cyrillic"],
+});
 export default function Skills() {
   const [blocksData, setBlocksData] = useState([
     {
@@ -116,10 +122,14 @@ export default function Skills() {
             key={block.id}
             className={`${style.ugol_6} flex flex-col justify-center items-center w-[100px] h-[100px] md:w-[140px] md:h-[140px] bg-[var(--text-color)] text-[var(--background-color)]`}
           >
-            <p className="text-[14px] md:text-[16px] cursor-default">
+            <p
+              className={` ${oswald.className} text-[14px] md:text-[16px] cursor-default`}
+            >
               {block.count}%
             </p>
-            <p className="text-[16px] md:text-[20px] cursor-default">
+            <p
+              className={`${oswald.className} text-[16px] md:text-[20px] cursor-default`}
+            >
               {block.text}
             </p>
           </motion.div>

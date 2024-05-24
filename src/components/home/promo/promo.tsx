@@ -1,9 +1,14 @@
 "use client";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { Josefin_Sans } from "next/font/google";
 import { motion } from "framer-motion";
 import Lines from "@/components/common/animation/lines";
-import style from "@/styles/promo/promo.module.css";
 import { useState } from "react";
+const josefin = Josefin_Sans({
+  weight: ["400", "500"],
+  display: "swap",
+  subsets: ["latin"],
+});
 export default function Promo() {
   const themes = [
     "base",
@@ -44,7 +49,7 @@ export default function Promo() {
             initial={{ y: -200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.4, delay: 1.6, type: "spring" }}
-            className=" text-center tracking-[15px] cursor-default text-[36px] md:text-[96px] text-[var(--text-color)]"
+            className={`${josefin.className} text-center tracking-[15px] cursor-default text-[36px] md:text-[96px] text-[var(--text-color)]`}
           >
             CREATOR KUBA
           </motion.p>
@@ -52,7 +57,7 @@ export default function Promo() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.6 }}
-            className="text-[16px] md:text-[42px] text-[var(--text-color)] tracking-[10px]"
+            className={` ${josefin.className} text-[16px] md:text-[42px] text-[var(--text-color)] tracking-[10px]`}
           >
             {text}
             <span>

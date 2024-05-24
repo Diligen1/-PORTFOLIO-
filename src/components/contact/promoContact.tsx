@@ -1,13 +1,19 @@
 "use client";
 import { useState } from "react";
 import style from "@/styles/headermobile/headermobile.module.css";
+import { motion } from "framer-motion";
 export default function PromoContact() {
   const [isHovered, setIsHovered] = useState(false);
   const [message, setMessage] = useState([]);
 
   return (
     <main className="mx-auto">
-      <div className="w-full h-[100vh] flex flex-col gap-[20px] justify-center items-center relative">
+      <motion.div
+        initial={{ y: 500, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 2, duration: 0.6, type: "spring" }}
+        className="w-full h-[100vh] flex flex-col gap-[20px] justify-center items-center relative"
+      >
         <textarea
           rows={6}
           cols={40}
@@ -52,7 +58,7 @@ export default function PromoContact() {
             ></i>
           </div>
         </button>
-      </div>
+      </motion.div>
     </main>
   );
 }

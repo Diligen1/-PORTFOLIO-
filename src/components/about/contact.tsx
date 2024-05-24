@@ -1,7 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useState } from "react";
+import { Nunito_Sans } from "next/font/google";
+const nuni = Nunito_Sans({
+  weight: ["300", "400", "500"],
+  display: "swap",
+  subsets: ["latin", "cyrillic"],
+});
 
 export default function Contact() {
   const [Contact, setCoontact] = useState([
@@ -48,7 +53,9 @@ export default function Contact() {
             <div className="text-[22px] h-[26px] text-[var(--background-color)]">
               {block.icon}
             </div>
-            <p className="text-[16px] text-[var(--background-color)]">
+            <p
+              className={`${nuni.className} text-[16px] text-[var(--background-color)]`}
+            >
               {block.text}
             </p>
           </a>

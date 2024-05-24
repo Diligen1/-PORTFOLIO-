@@ -2,7 +2,19 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Major_Mono_Display, Bebas_Neue } from "next/font/google";
 import HeaderMobile from "../headermobile/headermobile";
+const bebas = Bebas_Neue({
+  weight: ["400"],
+  display: "swap",
+  subsets: ["latin"],
+});
+const major = Major_Mono_Display({
+  weight: ["400"],
+  display: "swap",
+  subsets: ["latin"],
+});
+
 export default function Header() {
   const themes = ["base", "red", "white", "pink"];
   const [currentThemeIndex, setCurrentThemeIndex] = useState(0);
@@ -24,9 +36,9 @@ export default function Header() {
           >
             <Link
               href="/about"
-              className="text-[18px] text-[var(--text-color)] hover:text-[var(--second-color)] duration-500 text-underline"
+              className={`${major.className} text-[18px] text-[var(--text-color)] hover:text-[var(--second-color)] duration-500 text-underline`}
             >
-              ABOUT
+              about
             </Link>
           </motion.div>
           <motion.div
@@ -42,9 +54,9 @@ export default function Header() {
           >
             <Link
               href="/work"
-              className="text-[18px] text-[var(--text-color)] hover:text-[var(--second-color)] duration-500 text-underline"
+              className={`${major.className} text-[18px] text-[var(--text-color)] hover:text-[var(--second-color)] duration-500 text-underline`}
             >
-              WORK
+              work
             </Link>
           </motion.div>
           <motion.div
@@ -60,10 +72,10 @@ export default function Header() {
           >
             <div
               onClick={onClick}
-              className="cursor-pointer w-[70px] h-[70px] bg-[var(--third-color)] rounded-[8px] text-[36px] text-[var(--text-color)] flex justify-center items-center
-          hover:bg-[var(--text-color)] hover:text-[var(--background-color)] duration-500"
+              className={`${bebas.className} cursor-pointer w-[70px] h-[70px] bg-[var(--third-color)] rounded-[8px] text-[46px] text-[var(--text-color)] flex justify-center items-center
+          hover:bg-[var(--text-color)] hover:text-[var(--background-color)] duration-500`}
             >
-              CK
+              ck
             </div>
           </motion.div>
           <motion.div
@@ -79,9 +91,9 @@ export default function Header() {
           >
             <Link
               href="/"
-              className="text-[18px] text-[var(--text-color)] text-underline hover:text-[var(--second-color)] duration-500"
+              className={`${major.className} text-[18px] text-[var(--text-color)] text-underline hover:text-[var(--second-color)] duration-500`}
             >
-              HOME
+              home
             </Link>
           </motion.div>
 
@@ -98,9 +110,9 @@ export default function Header() {
           >
             <Link
               href="/contact"
-              className="text-[18px] text-[var(--text-color)] text-underline hover:text-[var(--second-color)] duration-500"
+              className={`${major.className} text-[18px] text-[var(--text-color)] text-underline hover:text-[var(--second-color)] duration-500`}
             >
-              CONTACT
+              contact
             </Link>
           </motion.div>
         </div>
